@@ -3,16 +3,36 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import Home from "@/pages/Home";
+import Experience from "@/pages/Experience";
+import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import { useEffect } from "react";
+
+// Scroll to top on route change
+function ScrollToTop() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return null;
+}
 
 function Router() {
   return (
-    <Switch>
-      {/* Add pages below */}
-      {/* <Route path="/" component={Home}/> */}
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
@@ -20,8 +40,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
+        <ScrollToTop />
         <Router />
+        <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
   );
