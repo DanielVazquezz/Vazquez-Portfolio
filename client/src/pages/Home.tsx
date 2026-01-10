@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50/50">
       {/* Hero Section */}
-      <div className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Abstract Background Decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent -z-10" />
         <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10" />
@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       {/* Stats Section */}
-      <div className="container mx-auto px-4 -mt-12 mb-20 relative z-10">
+      <div className="container mx-auto px-4 -mt-12 mb-12 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: t.hero.stat_1, value: t.hero.stat_1_val },
@@ -78,8 +78,55 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Professional Profile Section */}
+      <Section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+             <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Professional Profile</h2>
+             <p className="text-lg text-slate-600 leading-relaxed">
+               I combine three complementary areas: Finance & Accounting, Entrepreneurship, and Digital Content. This combination allows me to understand both numbers and narratives, moving comfortably between analysis, execution, and creativity.
+             </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-primary mb-4">
+                 <BarChart3 className="w-5 h-5" />
+               </div>
+               <h3 className="font-bold text-slate-900 mb-2">Finance & Accounting</h3>
+               <p className="text-slate-600 text-sm">Strong academic background, valuation, financial statements, markets.</p>
+             </div>
+             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+               <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4">
+                 <TrendingUp className="w-5 h-5" />
+               </div>
+               <h3 className="font-bold text-slate-900 mb-2">Entrepreneurship</h3>
+               <p className="text-slate-600 text-sm">Self-initiated projects, freelancing, client-oriented mindset.</p>
+             </div>
+             <div className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+               <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
+                 <BookOpen className="w-5 h-5" />
+               </div>
+               <h3 className="font-bold text-slate-900 mb-2">Digital & Content</h3>
+               <p className="text-slate-600 text-sm">Web creation, social media, analytics and communication.</p>
+             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Curiosity Section */}
+      <Section className="py-12 bg-slate-50 border-y border-slate-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">{t.about.curiosity_title}</h2>
+            <p className="text-lg text-slate-600 leading-relaxed italic">
+              "{t.about.curiosity_text}"
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* About Section */}
-      <Section className="bg-white">
+      <Section className="bg-white pt-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
             <div className="relative order-2 md:order-1">

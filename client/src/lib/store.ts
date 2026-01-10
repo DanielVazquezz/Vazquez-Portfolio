@@ -23,11 +23,12 @@ export const content = {
       about: "About",
       experience: "Experience",
       contact: "Contact",
+      resume: "Curriculum",
     },
     hero: {
       greeting: "Hello, I'm",
-      role: "Finance & Accounting Specialist",
-      tagline: "Aspiring Analyst in M&A, Transactions, and Valuation.",
+      role: "Analyst & Entrepreneur",
+      tagline: "Double Degree student in Finance & Accounting + Business Administration (GPA 8.62/10). Combining finance, accounting, and business analysis with entrepreneurship and digital projects.",
       cta_primary: "View Experience",
       cta_secondary: "Contact Me",
       stat_1: "Years Education",
@@ -37,32 +38,40 @@ export const content = {
     },
     about: {
       title: "About Me",
-      description: "I am a driven Finance & Accounting student with a global perspective. Currently completing my double degree at the University of Málaga and broadening my horizons at VSE Prague. My passion lies in financial analysis, valuation, and M&A.",
+      description: "I am a final-year student in a Double Degree in Finance & Accounting and Business Administration at the University of Málaga. My academic path has given me a solid foundation in finance, accounting, valuation, and business analysis. Beyond academics, I have a strong entrepreneurial mindset. I enjoy building things from scratch, experimenting, and learning by doing.",
+      curiosity_title: "Curiosity & Mindset",
+      curiosity_text: "Curiosity is one of my defining traits. I constantly seek to understand how things work, whether in finance, business models, technology, or productivity systems. I actively read, experiment, and reflect, applying what I learn to my academic work and personal projects.",
       certifications: "Certifications",
       education: "Education",
       skills: "Skills",
     },
     experience: {
       title: "Experience",
-      subtitle: "My professional journey so far.",
+      subtitle: "My professional journey in Finance, Entrepreneurship, and Digital Projects.",
       jobs: [
         {
           role: "Freelance Content Creator",
           company: "Self-Employed",
           date: "2024 - Present",
-          description: "Video editing for brands, achieving over 300k views through engaging storytelling and technical precision."
+          description: "Editing and post-production of short-form content (Reels/TikTok/Shorts) for brands. Optimized retention strategies (hooks, pacing) achieving over 300,000 total views. Developed storytelling and creative skills."
         },
         {
           role: "Web Project Manager",
           company: "Freelance",
           date: "2023",
-          description: "Managed WordPress and Elementor projects, optimizing SEO and site performance for various clients."
+          description: "Design and deployment of websites using WordPress and Elementor. Handled basic SEO, performance optimization, and analytics setup (GA4 & Search Console) for personal projects and clients."
         },
         {
           role: "Accounting Intern",
           company: "GYV Asesores",
           date: "July 2022",
-          description: "Handled accounting, invoice registration, and provided direct client support in a fast-paced environment."
+          description: "Managed accounting of invoices (journal entries), reviewed account reconciliations at closing, and provided operational support to clients using a3 (Wolters Kluwer) and Excel."
+        },
+        {
+          role: "Finance & Investment Analysis",
+          company: "Independent",
+          date: "Ongoing",
+          description: "Independent analysis of companies and markets. Focus on financial statement analysis (IFRS & US GAAP), valuation fundamentals (DCF, multiples), and macro/market context analysis."
         }
       ],
       education: [
@@ -70,19 +79,19 @@ export const content = {
           degree: "Double Degree in Finance & Accounting + Business Administration",
           school: "University of Málaga",
           date: "2021 - 2026",
-          details: "GPA 8.62/10. Focused on corporate finance, accounting principles, and business strategy."
+          details: "GPA: 8.62/10. Highlights: Honors in Financial Mathematics & Management Accounting II. Grades ≥9/10 in Corporate Finance, Financial Systems, and Econometrics."
         },
         {
-          degree: "Erasmus Program",
-          school: "VSE Prague",
+          degree: "Erasmus Exchange",
+          school: "Vysoká škola ekonomická v Praze (VSE)",
           date: "2024 - 2025",
-          details: "International business exposure and advanced economic studies."
+          details: "International business exposure and advanced economic studies in Prague."
         }
       ]
     },
     contact: {
       title: "Get in Touch",
-      subtitle: "Open for opportunities in M&A and Financial Analysis.",
+      subtitle: "Open for opportunities in M&A, Transactions, and Financial Analysis.",
       form: {
         name: "Your Name",
         email: "Email Address",
@@ -104,11 +113,12 @@ export const content = {
       about: "Sobre mí",
       experience: "Experiencia",
       contact: "Contacto",
+      resume: "Currículum",
     },
     hero: {
       greeting: "Hola, soy",
-      role: "Especialista en Finanzas y Contabilidad",
-      tagline: "Aspirante a Analista en M&A, Transacciones y Valoración.",
+      role: "Analista y Emprendedor",
+      tagline: "Estudiante de Doble Grado en Finanzas y Contabilidad + ADE (Nota media 8.62/10). Combinando finanzas, contabilidad y análisis de negocios con emprendimiento y proyectos digitales.",
       cta_primary: "Ver Experiencia",
       cta_secondary: "Contactar",
       stat_1: "Años Formación",
@@ -118,32 +128,40 @@ export const content = {
     },
     about: {
       title: "Sobre Mí",
-      description: "Soy un estudiante apasionado de Finanzas y Contabilidad con perspectiva global. Actualmente completo mi doble grado en la Universidad de Málaga y amplío horizontes en VSE Praga. Mi pasión reside en el análisis financiero, valoración y M&A.",
+      description: "Soy estudiante de último curso del Doble Grado en Finanzas y Contabilidad y Administración de Empresas en la Universidad de Málaga. Mi trayectoria académica me ha dado una base sólida en finanzas, contabilidad, valoración y análisis de negocios. Más allá de lo académico, tengo una fuerte mentalidad emprendedora. Disfruto construyendo cosas desde cero, experimentando y aprendiendo haciendo.",
+      curiosity_title: "Curiosidad y Mentalidad",
+      curiosity_text: "La curiosidad es uno de mis rasgos definitorios. Busco constantemente entender cómo funcionan las cosas, ya sea en finanzas, modelos de negocio, tecnología o sistemas de productividad. Leo, experimento y reflexiono activamente, aplicando lo que aprendo a mi trabajo académico y proyectos personales.",
       certifications: "Certificaciones",
       education: "Educación",
       skills: "Habilidades",
     },
     experience: {
       title: "Experiencia",
-      subtitle: "Mi trayectoria profesional hasta ahora.",
+      subtitle: "Mi trayectoria profesional en Finanzas, Emprendimiento y Proyectos Digitales.",
       jobs: [
         {
           role: "Creador de Contenido Freelance",
           company: "Autónomo",
           date: "2024 - Actualidad",
-          description: "Edición de video para marcas, logrando más de 300k visualizaciones mediante narrativa atractiva y precisión técnica."
+          description: "Edición y postproducción de contenido de formato corto (Reels/TikTok/Shorts) para marcas. Optimización de retención (ganchos, ritmo) logrando más de 300,000 vistas totales. Desarrollo de storytelling y habilidades creativas."
         },
         {
           role: "Gestor de Proyectos Web",
           company: "Freelance",
           date: "2023",
-          description: "Gestión de proyectos en WordPress y Elementor, optimizando SEO y rendimiento para varios clientes."
+          description: "Diseño y despliegue de sitios web usando WordPress y Elementor. Manejo de SEO básico, optimización de rendimiento y configuración de análisis (GA4 y Search Console) para clientes."
         },
         {
           role: "Becario de Contabilidad",
           company: "GYV Asesores",
           date: "Julio 2022",
-          description: "Gestión contable, registro de facturas y soporte directo al cliente en un entorno dinámico."
+          description: "Gestión contable de facturas (asientos), revisión de conciliaciones al cierre y soporte operativo directo a clientes usando a3 (Wolters Kluwer) y Excel."
+        },
+        {
+          role: "Análisis Financiero y de Inversiones",
+          company: "Independiente",
+          date: "En curso",
+          description: "Análisis independiente de empresas y mercados. Enfoque en análisis de estados financieros (IFRS y US GAAP), fundamentos de valoración (DCF, múltiplos) y análisis de contexto macro/mercado."
         }
       ],
       education: [
@@ -151,19 +169,19 @@ export const content = {
           degree: "Doble Grado en Finanzas y Contabilidad + ADE",
           school: "Universidad de Málaga",
           date: "2021 - 2026",
-          details: "Nota media 8.62/10. Enfocado en finanzas corporativas, principios contables y estrategia empresarial."
+          details: "Nota media: 8.62/10. Destacados: Matrícula de Honor en Matemática Financiera y Contabilidad de Gestión II. Notas ≥9/10 en Finanzas Corporativas, Sistemas Financieros y Econometría."
         },
         {
-          degree: "Programa Erasmus",
-          school: "VSE Praga",
+          degree: "Intercambio Erasmus",
+          school: "Vysoká škola ekonomická v Praze (VSE)",
           date: "2024 - 2025",
-          details: "Exposición a negocios internacionales y estudios económicos avanzados."
+          details: "Exposición a negocios internacionales y estudios económicos avanzados en Praga."
         }
       ]
     },
     contact: {
       title: "Contactar",
-      subtitle: "Abierto a oportunidades en M&A y Análisis Financiero.",
+      subtitle: "Abierto a oportunidades en M&A, Transacciones y Análisis Financiero.",
       form: {
         name: "Tu Nombre",
         email: "Correo Electrónico",

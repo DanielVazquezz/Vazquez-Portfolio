@@ -42,6 +42,15 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          <a 
+            href="/cv.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+          >
+            {t.resume}
+          </a>
           
           <button 
             onClick={toggleLanguage}
