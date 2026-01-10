@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { useStore, content } from "@/lib/store";
-import { ArrowRight, CheckCircle2, TrendingUp, BookOpen, BarChart3, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, BookOpen, BarChart3, ChevronRight, Mail, Linkedin, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 
@@ -20,63 +20,86 @@ export default function Home() {
         <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10" />
         
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/50 border border-blue-200 text-primary font-medium text-sm mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-              </span>
-              {t.hero.role}
-            </div>
+          <div className="flex flex-col md:flex-row items-center gap-12">
             
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-[1.1] mb-6">
-              {t.hero.greeting} <span className="text-gradient">Daniel Vázquez</span>.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed mb-10 font-light">
-              {t.hero.tagline}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/experience" className="px-8 py-4 bg-primary text-white rounded-xl font-semibold shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                {t.hero.cta_primary}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link href="/contact" className="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 flex items-center justify-center">
-                {t.hero.cta_secondary}
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="container mx-auto px-4 -mt-12 mb-12 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { label: t.hero.stat_1, value: t.hero.stat_1_val },
-            { label: t.hero.stat_2, value: t.hero.stat_2_val },
-            { label: "CFA Level I", value: "Candidate" },
-            { label: "Erasmus", value: "VSE Prague" },
-          ].map((stat, i) => (
+            {/* Profile Image - Left Side */}
             <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-48 h-48 md:w-64 md:h-64 shrink-0 relative"
             >
-              <h3 className="text-3xl font-display font-bold text-primary mb-1">{stat.value}</h3>
-              <p className="text-sm text-slate-500 font-medium">{stat.label}</p>
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full blur-xl opacity-20 transform translate-y-4"></div>
+              <img 
+                src="/profile.jpg" 
+                alt="Daniel Vázquez Vera" 
+                className="w-full h-full object-cover rounded-full border-4 border-white shadow-xl relative z-10"
+              />
             </motion.div>
-          ))}
+
+            {/* Hero Content - Right Side */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-2xl text-center md:text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/50 border border-blue-200 text-primary font-medium text-sm mb-6 mx-auto md:mx-0">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                {t.hero.role}
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-[1.1] mb-6">
+                {t.hero.greeting} <span className="text-gradient">Daniel Vázquez</span>.
+              </h1>
+              
+              <div className="space-y-4 mb-8">
+                <p className="text-xl md:text-2xl text-slate-800 font-medium italic">
+                  "{t.hero.tagline}"
+                </p>
+                <p className="text-lg text-slate-600 font-light leading-relaxed">
+                  {t.hero.bio}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                <a 
+                  href="mailto:vazquezveradaniel@gmail.com"
+                  className="px-6 py-3 bg-white text-slate-700 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 flex items-center gap-2 shadow-sm hover:shadow-md"
+                >
+                  <Mail className="w-5 h-5 text-primary" />
+                  {t.hero.cta_email}
+                </a>
+                
+                <a 
+                  href="https://www.linkedin.com/in/daniel-vázquez-vera-81356723b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-[#0077b5] text-white rounded-xl font-semibold shadow-md shadow-blue-500/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Linkedin className="w-5 h-5" />
+                  {t.hero.cta_linkedin}
+                </a>
+
+                <a 
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-slate-900 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                >
+                  <FileText className="w-5 h-5" />
+                  {t.hero.cta_resume}
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
+
+      {/* Stats Section Removed as requested */}
 
       {/* Professional Profile Section */}
       <Section className="py-16 bg-white">
